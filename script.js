@@ -4,10 +4,12 @@ console.log('holi')
 const button = document.getElementById('btn')
 const buttonColor = document.getElementById('btn-color')
 const buttonSize = document.getElementById('btn-size')
+const buttonNuevo = document.getElementById('btn-nuevo')
 
 button.addEventListener('click', () => cambiarTexto())
 buttonColor.addEventListener('click', () => cambiarColor())
 buttonSize.addEventListener('click', () => cambiarSize())
+buttonNuevo.addEventListener('click', () => crearElemento())
 
 console.log(button)
 
@@ -31,4 +33,11 @@ const cambiarSize = () => {
     const text = document.querySelector('.titulo')
     text.style.fontSize = '100px'
     console.log(body)
+}
+
+const crearElemento = () => {
+    const body = document.getElementById('container')
+    const paragraph = document.createElement('p')
+    paragraph.innerHTML = 'Nuevo elemento'
+    body.appendChild(paragraph)
 }
